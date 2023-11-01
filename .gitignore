@@ -1,0 +1,3 @@
+terraform/*s
+.terraform.lock.hcl
+terraform-provider-google_v5.4.0_x5
