@@ -1,0 +1,28 @@
+applications:
+ - name: demo
+   namespace: random_name
+   additionalLabels: {}
+   additionalAnnotations: {}
+   project: default
+   source:
+     repoURL: placeholder
+     targetRevision: HEAD
+     path: demoapp
+     directory:
+       recurse: true
+   destination:
+     server: https://kubernetes.default.svc
+     namespace: application
+   syncPolicy:
+     automated:
+       prune: false
+       selfHeal: false
+   revisionHistoryLimit: null
+   ignoreDifferences:
+   - group: apps
+     kind: Deployment
+     jsonPointers:
+     - /spec/replicas
+   info:
+   - name: url
+     value: https://demo.example.com

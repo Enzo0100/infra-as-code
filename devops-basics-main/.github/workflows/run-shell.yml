@@ -1,0 +1,15 @@
+name: shell-script
+
+on:
+  pull_request:
+    branches: ['main']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - run: ls
+      - run: echo "Running basic.sh script"
+      - run: cd topics/shell/basic; bash ./basic.sh
