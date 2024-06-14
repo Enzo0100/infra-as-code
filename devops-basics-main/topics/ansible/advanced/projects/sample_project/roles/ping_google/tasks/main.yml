@@ -1,4 +1,0 @@
----
-- name: Ping google.com
-  ping:
-    data: "{{ google_server }}"

@@ -1,6 +1,0 @@
----
-- name: Check up time
-  hosts: my-localhost
-  tasks:
-    - name: Execute uptime command
-      command: uptime
